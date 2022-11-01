@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@color/item_background">
+
+    <ImageView
+        android:id="@+id/image_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingHorizontal="@dimen/list_item_padding"
+        android:paddingTop="@dimen/list_item_padding"
+        android:textAppearance="@style/H2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_thumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/text_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingHorizontal="@dimen/list_item_padding"
+        android:textAppearance="@style/Subtitle1"
+        app:layout_constraintEnd_toStartOf="@+id/text_date"
+        app:layout_constraintStart_toEndOf="@+id/image_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/text_title"
+        tools:text="Stephen King" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:lines="1"
+        android:paddingEnd="@dimen/list_item_padding"
+        android:textAppearance="@style/Subtitle1"
+        app:layout_constraintBottom_toBottomOf="@+id/text_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_author"
+        app:layout_constraintTop_toTopOf="@+id/text_author"
+        tools:text="30 of September 2022" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ellipsize="end"
+        android:paddingBottom="@dimen/list_item_padding"
+        android:paddingHorizontal="@dimen/list_item_padding"
+        android:paddingTop="4dp"
+        android:textAppearance="@style/Body1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/text_author"
+        tools:text="Thi is the description of news publisher" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

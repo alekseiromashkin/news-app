@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="divider">@color/grey_40</color>
+    <color name="item_background">@color/white</color>
+    <color name="item_foreground">@color/white_80</color>
+</resources>

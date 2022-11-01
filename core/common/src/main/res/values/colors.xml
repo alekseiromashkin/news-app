@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#fefefe</color>
+    <color name="white_60">#99FEFEFE</color>
+    <color name="white_80">#CCFEFEFE</color>
+    <color name="light_grey">#E1E1E1</color>
+    <color name="grey">#1E1E1E</color>
+    <color name="grey_80">#CC1E1E1E</color>
+    <color name="grey_60">#991E1E1E</color>
+    <color name="grey_40">#661E1E1E</color>
+
+    <color name="color_primary">@color/white</color>
+    <color name="color_primary_dark">@color/grey_60</color>
+    <color name="color_accent">@color/grey_80</color>
+
+    <color name="app_background">@color/light_grey</color>
+    <color name="app_bar_background">@color/white</color>
+    <color name="app_bar_text">@color/grey_80</color>
+
+    <color name="status_bar">@color/light_grey</color>
+    <color name="text_title">@color/grey_80</color>
+    <color name="text_subtitle">@color/grey_40</color>
+    <color name="text_body">@color/grey_60</color>
+</resources>
