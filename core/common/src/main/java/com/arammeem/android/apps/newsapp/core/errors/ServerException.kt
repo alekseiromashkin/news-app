@@ -1,6 +1,6 @@
 package com.arammeem.android.apps.newsapp.core.errors
 
 class ServerException(
-    val code: String?,
-    override val message: String?,
+    val code: String? = null,
+    override val message: String? = null,
 ) : Throwable()
