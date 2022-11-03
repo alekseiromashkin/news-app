@@ -7,8 +7,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 internal data class SourcesResponse(
     val status: String,
-    val code: String? = null,
-    val message: String? = null,
     val sources: List<SourceNetworkEntity>? = null,
 )
 
