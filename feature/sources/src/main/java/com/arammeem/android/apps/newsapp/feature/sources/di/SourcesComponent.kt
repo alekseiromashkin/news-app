@@ -1,6 +1,5 @@
 package com.arammeem.android.apps.newsapp.feature.sources.di
 
-import android.content.res.Resources
 import androidx.annotation.RestrictTo
 import com.arammeem.android.apps.newsapp.core.database.NewsDatabase
 import com.arammeem.android.apps.newsapp.core.di.FeatureScope
@@ -11,7 +10,11 @@ import retrofit2.Retrofit
 import kotlin.properties.Delegates.notNull
 
 @Component(
-    modules = [SourcesModule::class],
+    modules = [
+        SourcesModule::class,
+        NetworkModule::class,
+        NavigationModule::class,
+    ],
     dependencies = [SourcesDependencies::class]
 )
 @FeatureScope
