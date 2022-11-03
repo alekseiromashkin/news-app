@@ -13,18 +13,24 @@ android {
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
         }
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
     namespace = "com.arammeem.android.apps.newsapp.core.database"
 }
 
 dependencies {
-    implementation(libs.dagger)
-
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.datetime)
+
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)
 
-    kapt(libs.dagger.compiler)
+    androidTestImplementation(libs.androidx.test.espresso)
+    androidTestImplementation(libs.androidx.test.ext)
+    androidTestImplementation(libs.junit4)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
 }
