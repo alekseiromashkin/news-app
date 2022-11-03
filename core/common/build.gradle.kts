@@ -9,16 +9,16 @@ android {
 }
 
 dependencies {
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.dagger)
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.recyclerview)
-    implementation(libs.kotlin.reflect)
 
-    implementation(libs.kotlinx.serialization.json)
-
+    implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlin.reflect)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit4)
 }

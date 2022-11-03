@@ -1,7 +1,9 @@
 package com.arammeem.android.apps.newsapp.feature.articles.data
 
+import com.arammeem.android.apps.newsapp.core.capped
 import com.arammeem.android.apps.newsapp.core.database.NewsDatabase
 import com.arammeem.android.apps.newsapp.core.database.model.ArticlePersistentEntity
+import com.arammeem.android.apps.newsapp.core.toOffsetDateTime
 import com.arammeem.android.apps.newsapp.feature.articles.data.entity.Article
 import com.arammeem.android.apps.newsapp.feature.articles.data.entity.Source
 import com.arammeem.android.apps.newsapp.feature.articles.model.ArticlesPersistentRepository
@@ -32,7 +34,7 @@ internal class ArticlesPersistentRepositoryImpl @Inject constructor(
             val articles = repository.getArticles(country, category, sources, q, pageSize, page)
             database.articleDao().insert(articles.map { it.toPersistentEntity() })
             articles
-        }
+        }.onFailure { it.printStackTrace() }
 
         return if (result.isSuccess || (page ?: 1) > 1) {
             result.getOrNull().orEmpty()
@@ -47,7 +49,7 @@ private fun Article.toPersistentEntity(): ArticlePersistentEntity {
     return ArticlePersistentEntity(
         sourceId = source.id,
         title = title,
-        publishedAt = OffsetDateTime.parse(publishedAt).toInstant().toEpochMilli(),
+        publishedAt = publishedAt.toOffsetDateTime().toInstant().capped().toEpochMilli(),
         sourceName = source.name,
         author = author,
         description = description,

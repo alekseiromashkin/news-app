@@ -6,17 +6,15 @@ import com.arammeem.android.apps.newsapp.feature.articles.data.entity.Article
 import com.arammeem.android.apps.newsapp.feature.articles.data.network.ArticlesApi
 import com.arammeem.android.apps.newsapp.feature.articles.data.network.toArticlesList
 import com.arammeem.android.apps.newsapp.feature.articles.model.ArticlesRepository
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
 import okhttp3.ResponseBody
-import retrofit2.Retrofit
 import javax.inject.Inject
 
 internal class ArticlesRepositoryImpl @Inject constructor(
-    retrofit: Retrofit
+    private val articlesApi: ArticlesApi
 ): ArticlesRepository {
-
-    private val service = retrofit.create(ArticlesApi::class.java)
 
     override suspend fun getArticles(
         country: String?,
@@ -28,7 +26,7 @@ internal class ArticlesRepositoryImpl @Inject constructor(
     ): List<Article> {
         val sourceList = sources?.joinToString(separator = ",")
 
-        val result = service.getArticles(country, category, sourceList, q, pageSize, page)
+        val result = articlesApi.getArticles(country, category, sourceList, q, pageSize, page)
         return if (result.isSuccessful) {
             result.body()?.toArticlesList().orEmpty()
         } else {
@@ -38,9 +36,11 @@ internal class ArticlesRepositoryImpl @Inject constructor(
     }
 }
 
+@OptIn(ExperimentalSerializationApi::class)
 private fun ResponseBody?.toErrorBody(): ErrorBody {
-    if (this == null) {
-        return ErrorBody()
+    return if (this != null) {
+        Json.decodeFromStream(ErrorBody.serializer(), byteStream())
+    } else {
+        ErrorBody()
     }
-    return Json.decodeFromStream(ErrorBody.serializer() ,byteStream())
 }
