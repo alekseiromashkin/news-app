@@ -10,21 +10,18 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
 import okhttp3.ResponseBody
-import retrofit2.Retrofit
 import javax.inject.Inject
 
 internal class SourcesRepositoryImpl @Inject constructor(
-    retrofit: Retrofit
+    private val sourcesApi: SourcesApi
 ) : SourcesRepository {
-
-    private val service = retrofit.create(SourcesApi::class.java)
 
     override suspend fun getSources(
         category: String?,
         language: String?,
         country: String?
     ): List<Source> {
-        val result = service.getSources(category, language, country)
+        val result = sourcesApi.getSources(category, language, country)
         return if (result.isSuccessful) {
             result.body()?.toSourceList().orEmpty()
         } else {
