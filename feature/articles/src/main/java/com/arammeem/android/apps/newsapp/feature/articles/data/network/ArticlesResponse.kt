@@ -7,8 +7,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 internal data class ArticlesResponse(
     val status: String,
-    val code: String? = null,
-    val message: String? = null,
     val totalResults: Int,
     val articles: List<ArticleNetworkEntity>? = null
 )

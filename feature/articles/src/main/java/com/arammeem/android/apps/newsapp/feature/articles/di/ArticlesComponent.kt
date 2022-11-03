@@ -3,7 +3,6 @@ package com.arammeem.android.apps.newsapp.feature.articles.di
 import androidx.annotation.RestrictTo
 import com.arammeem.android.apps.newsapp.core.database.NewsDatabase
 import com.arammeem.android.apps.newsapp.core.di.FeatureScope
-import com.arammeem.android.apps.newsapp.core.navigation.ScreenProvider
 import com.arammeem.android.apps.newsapp.feature.articles.model.entity.ArticlesQueryParams
 import com.arammeem.android.apps.newsapp.feature.articles.presentation.ArticlesViewModel
 import dagger.BindsInstance
@@ -12,7 +11,7 @@ import retrofit2.Retrofit
 import kotlin.properties.Delegates
 
 @Component(
-    modules = [ArticlesModule::class],
+    modules = [ArticlesModule::class, ArticlesNetworkModule::class],
     dependencies = [ArticlesDependencies::class]
 )
 @FeatureScope

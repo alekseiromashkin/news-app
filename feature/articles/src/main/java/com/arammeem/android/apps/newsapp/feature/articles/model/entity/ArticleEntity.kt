@@ -1,5 +1,6 @@
 package com.arammeem.android.apps.newsapp.feature.articles.model.entity
 
+import com.arammeem.android.apps.newsapp.core.toOffsetDateTime
 import com.arammeem.android.apps.newsapp.feature.articles.data.entity.Article
 import java.time.OffsetDateTime
 
@@ -19,6 +20,6 @@ internal fun Article.toArticleEntity(): ArticleEntity {
         url = url,
         urlToImage = urlToImage,
         author = author,
-        publishedAt = OffsetDateTime.parse(publishedAt),
+        publishedAt = publishedAt.toOffsetDateTime(),
     )
 }
