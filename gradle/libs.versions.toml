@@ -85,4 +85,4 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-releasehub-gradle-plugin = { id = "com.dipien.releaseshub.gradle.plugin", version.ref = "releaseshubGradlePlugin" }
+releasehub-gradle-plugin = { id = "com.dipien.releaseshub.gradle.plugin", version.ref = "4.0.0" }
