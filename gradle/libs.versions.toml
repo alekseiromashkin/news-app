@@ -1,5 +1,5 @@
 [libraries]
-android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:1.1.5"
+android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.0.0"
 android-gradle = "com.android.tools.build:gradle:7.3.1"
 androidx-appcompat = "androidx.appcompat:appcompat:1.5.1"
 androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
