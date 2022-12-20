@@ -12,7 +12,7 @@ androidx-swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.
 androidx-test-espresso = "androidx.test.espresso:espresso-contrib:3.5.0"
 androidx-test-ext = "androidx.test.ext:junit-ktx:1.1.4"
 
-coil-kt = "io.coil-kt:coil:2.2.1"
+coil-kt = "io.coil-kt:coil:2.2.2"
 
 dagger = "com.google.dagger:dagger:2.44.2"
 dagger-compiler = "com.google.dagger:dagger-compiler:2.44.2"
