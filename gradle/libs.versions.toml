@@ -21,7 +21,7 @@ kotlinx-coroutines-android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1
 kotlinx-coroutines-test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
 kotlinx-datetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.4.0"
 kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.22"
-kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.7.20"
+kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.7.22"
 kotlinx-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
 kotlin-stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20"
 
