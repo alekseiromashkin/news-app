@@ -1,13 +1,11 @@
 name: "Upgrade Dependencies"
 on:
-  schedule:
-    - cron: "30 12 * * *"
   workflow_dispatch:
     inputs:
       pullRequestsMax:
         description: 'The maximum amount of pull requests to create during the action execution.'
         required: true
-        default: '5'
+        default: '25'
       includes:
         description: 'The dependencies to include. You can define a groupId to match all the artifacts for that group id, or groupId:artifactId to match a particular artifact. '
         required: false
