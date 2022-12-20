@@ -25,7 +25,7 @@ kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.7.20"
 kotlinx-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
 kotlin-stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20"
 
-mockito-kotlin = "org.mockito.kotlin:mockito-kotlin:4.0.0"
+mockito-kotlin = "org.mockito.kotlin:mockito-kotlin:4.1.0"
 
 okhttp = "com.squareup.okhttp3:okhttp:4.10.0"
 okhttp-logging = "com.squareup.okhttp3:logging-interceptor:4.10.0"
