@@ -1,6 +1,6 @@
 [libraries]
 android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.0.0"
-android-gradle = "com.android.tools.build:gradle:7.3.1"
+android-gradle = "com.android.tools.build:gradle:7.4.2"
 androidx-appcompat = "androidx.appcompat:appcompat:1.5.1"
 androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 androidx-core-ktx = "androidx.core:core-ktx:1.9.0"
