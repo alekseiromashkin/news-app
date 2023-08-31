@@ -14,8 +14,8 @@ androidx-test-ext = "androidx.test.ext:junit-ktx:1.1.4"
 
 coil-kt = "io.coil-kt:coil:2.2.2"
 
-dagger = "com.google.dagger:dagger:2.44.2"
-dagger-compiler = "com.google.dagger:dagger-compiler:2.44.2"
+dagger = "com.google.dagger:dagger:2.48"
+dagger-compiler = "com.google.dagger:dagger-compiler:2.48"
 
 kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.22"
 kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.7.22"
