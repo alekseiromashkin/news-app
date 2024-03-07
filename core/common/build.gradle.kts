@@ -1,7 +1,7 @@
 plugins {
     id("newsapp.android.library")
     id("kotlin-kapt")
-    kotlin("plugin.serialization") version "1.7.20"
+    kotlin("plugin.serialization") version "1.9.23"
 }
 
 android {
